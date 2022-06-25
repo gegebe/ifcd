@@ -1,0 +1,46 @@
+@media screen and (min-width:320px) and (max-width:575px) {
+    header {
+        display: flex;
+    }
+
+    header img {
+        width: 50vw;
+    }
+
+    article.servei header {
+        padding:0;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px){
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1vw 0 0 1.7vw;
+    }
+    
+    header img {
+        width: 28vw;
+    }
+    
+    header nav {
+        margin: 6vw 0 0 0;
+        align-self: center;
+    }
+
+    header nav ul {
+        gap:6vw;
+    }
+
+    section.disseny h1 {
+        margin:8vh 0 4vh 0;
+    }
+
+    article.servei header {
+        padding:0;
+    }
+
+}
+
