@@ -1,4 +1,4 @@
-/* HEADER */
+/* VARIABLE */
 
 :root {
     --tipo:'IBM Plex Sans', Helvetica, Arial, sans-serif;
@@ -14,10 +14,21 @@
     --blanco:#ffffff;
 }
 
+/* GENERALES */
+
 body {
     font-family: var(--tipo);
     font-size: var(--tipoCuerpoSize);
 }
+
+.cab1 h1 {
+    font-size: var(--tipoH2Size);
+    text-align: center;
+    margin: 14vh 0 4vh 0;
+    padding:0 6vw 0 6vw;
+}
+
+/* INICIO HEADER */
 
 header {
     display: flex;
@@ -53,13 +64,10 @@ header nav ul li a:hover {
     border-bottom:2px solid var(--rojoCorp);
 }
 
+/* FIN HEADER */
 
-.cab1 h1 {
-    font-size: var(--tipoH2Size);
-    text-align: center;
-    margin: 14vh 0 4vh 0;
-    padding:0 6vw 0 6vw;
-}
+
+/* INICIO HOME */
 
 section.disseny p {
     text-align: center;
@@ -138,7 +146,9 @@ article.servei picture img {
     order:1;
 }
 
-/* CONTACTO */
+/* FIN HOME */
+
+/* INICIO CONTACTO */
 
 main form {
     margin:0 0 2vw 0;
@@ -147,7 +157,6 @@ main form {
 main form ul {
     display: flex;
     flex-direction: column;
-    /*! width: 70vw; */
     justify-content: center;
     align-items: center;
     gap: 2vw;
@@ -187,9 +196,16 @@ main form ul li button {
     width: 50%;
     color: var(--blanco);
     background: var(--rojoCorp);
-    border:0;
+    border:1px solid var(--rojoCorp);
     font-size: 18px;
     padding:3vh;
+}
+
+main form ul li button:hover {
+    border:1px solid var(--rojoCorp);
+    background: var(--blanco);
+    color: var(--rojoCorp);
+
 }
 
 input[id="dades"] {
@@ -203,7 +219,188 @@ label[for="dades"]{
     order:2;
 }
 
-/* FOOTER */
+label[for="dades"] a{
+    color: var(--rojoCorp);
+}
+
+/* FIN CONTACTO */
+
+/* INICIO ACERCA */
+
+section.sectores {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70vw;
+    margin:0 auto;
+    gap:1vh;
+}
+
+section.sectores div:nth-child(1){
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+section.sectores div:nth-child(1) div{
+    flex-direction: column;
+}
+
+section.sectores img {
+    width: 14vw;
+    height: 14vw;
+    margin:0 4vw 0 0;
+}
+
+section.sectores h2 {
+    font-size: var(--tipoH2Size);
+}
+
+section.sectores p {
+    line-height: 120%;
+    padding: 4vh 0 0 0;
+}
+
+section.sectores ul li{
+    list-style-type: none;
+    line-height: 140%;
+} 
+
+section.sectores div {
+    display: flex;
+    margin: 4vw 0 0 0;
+}
+
+section.sectores article {
+    width: 50%;
+    padding:4vw;
+    border-left:1px solid var(--rojoCorp);
+    gap:2vw;
+}
+
+section.sectores article a {
+    text-decoration: none;
+    color: var(--negro);
+    padding:4vh 1vh 1vh 1vh;
+    display: inline-block;
+}
+
+section.sectores article a::before {
+    content: "» ";
+}
+
+section.sectores article a:hover {
+    border-bottom:2px solid var(--rojoCorp);
+}
+
+section.sectores article h4 {
+    font-size: var(--tipoH4Size);
+}
+
+/* FIN ACERCA */
+
+/* INICIO CV PROFESIONAL */
+
+main.cv {
+    width: 70vw;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    gap:4vw;
+}
+
+nav.interna {
+    position: sticky;
+    top:0;
+    padding: 2vw;
+    background: var(--blanco);
+    border-top:1px solid var(--rojoCorp);
+    border-bottom:2px solid var(--rojoCorp);
+    z-index: 100;
+}
+
+nav.interna ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:4vw;
+}
+
+nav.interna ul li {
+    list-style-type: none;
+}
+
+nav.interna ul li a {
+    text-decoration: none;
+    padding:1vh;
+    color:var(--negro);
+}
+
+nav.interna ul li a:hover {
+border-bottom:2px solid var(--rojoCorp);
+}
+
+main.cv section {
+    gap:2vw;
+}
+
+main.cv section p {
+    margin: 0 0 2vw 0;
+    line-height: 120%;
+}
+
+main.cv section ul li {
+    line-height: 140%;
+}
+
+main.cv section ul li span {
+    font-weight: var(--tipoP500);
+}
+
+main.cv section a {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+main.cv section h2 {
+    font-size: var(--tipoH3Size);
+    margin:0 0 4vw 0;
+}
+
+main.cv section h3 {
+    font-size: var(--tipoH4Size);
+    font-weight: var(--tipoP300);
+    margin:0 0 4vw 0;
+}
+
+main.cv section h4 {
+    font-size: var(--tipoH4Size);
+    font-weight: var(--tipoP300);
+    margin:4vw 0 4vw 0;
+}
+
+main section.feina {
+    margin: 0 0 4vw 0;
+}
+
+main.cv section table, main.cv section table td, main.cv section table thead, main.cv section table th  {
+    border: 1px solid var(--rojoCorp);
+    padding:1vh;
+    text-align: center;
+}
+
+main.cv section table td:nth-child(1){
+    background: var(--rojoCorp);
+    color:var(--blanco);
+}
+
+main.cv ul li span {
+    color: var(--rojoCorp);
+}
+
+/* FIN CV PROFESIONAL */
+
+/* INICIO FOOTER */
 
 footer {
     border-top: 1px solid var(--rojoCorp);
@@ -226,6 +423,7 @@ footer ul.rrss li a {
     align-items: center;
     text-decoration: none;
     padding:1vh;
+    color: var(--negro);
     gap:1vw;
 }
 
@@ -236,3 +434,5 @@ footer ul.rrss li a:hover {
 footer ul.rrss li img {
     width:30px;
 }
+
+/* FIN FOOTER */
