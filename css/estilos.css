@@ -282,6 +282,7 @@ section.sectores article a {
     color: var(--negro);
     padding:4vh 1vh 1vh 1vh;
     display: inline-block;
+    border-bottom:2px solid transparent;  /*<- Esto evita el salto que da el diseño cuando haces hover, por tema de accesibilidad se debe evitar cambios buscos en el diseño */
 }
 
 section.sectores article a::before {
@@ -436,3 +437,9 @@ footer ul.rrss li img {
 }
 
 /* FIN FOOTER */
+
+
+/* El tema de la especifidad es muy problematico cuando un proyecto crece, por eso 
+existen tecnicas de css como class css (como los de boostrap) o BEM (https://animaticss.com/articulo/que-es-bem-css/)
+se debe usar siempre clases y no directamente el tag, dejando la especifidad para los elementos y pseudo-elementos que no se pueden 
+acceder directamente como :after, :before, :placeholder, etc. */
